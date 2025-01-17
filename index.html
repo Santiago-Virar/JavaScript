@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Tienda</title>
+    <title>Conversor de Dólares a Pesos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Simulador de Tienda</h1>
+    <header>
+        <h1>Conversor de Dólares a Pesos Argentinos</h1>
+        <p id="valor-dolar">Valor actual del dólar: </p>
+    </header>
+
+    <main>
+        <section>
+            <label for="usd">Cantidad en USD:</label>
+            <input id="usd" type="number" placeholder="Ejemplo: 100" />
+            <button id="convertir">Convertir</button>
+        </section>
+
+        <section id="resultados">
+            <h2>Resultados</h2>
+            <p id="resultado">Ingresa una cantidad y presiona "Convertir".</p>
+        </section>
+    </main>
+
     <script src="main.js"></script>
 </body>
+
 </html>
