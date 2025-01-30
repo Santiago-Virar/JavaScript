@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Dólares a Pesos</title>
+    <title>Conversor de Dólar</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
-    <header>
-        <h1>Conversor de Dólares a Pesos Argentinos</h1>
-        <p id="valor-dolar">Valor actual del dólar: </p>
-    </header>
+    <h1>Conversor de Dólar</h1>
+    <p>Cotización actual del dólar:</p>
+    <div id="cotizacion">
+        <p><strong>Dólar Oficial:</strong> <span id="dolar-oficial">Cargando...</span></p>
+        <p><strong>Dólar Blue:</strong> <span id="dolar-blue">Cargando...</span></p>
+    </div>
 
-    <main>
-        <section>
-            <label for="usd">Cantidad en USD:</label>
-            <input id="usd" type="number" placeholder="Ejemplo: 100" />
-            <button id="convertir">Convertir</button>
-        </section>
+    <h2>Convertir Dólares a Pesos</h2>
+    <input type="number" id="monto" placeholder="Ingresá dólares">
+    <select id="tipo-dolar">
+        <option value="oficial">Dólar Oficial</option>
+        <option value="blue">Dólar Blue</option>
+    </select>
+    <button id="convertir">Convertir</button>
+    <p>Resultado: <span id="resultado">-</span> ARS</p>
 
-        <section id="resultados">
-            <h2>Resultados</h2>
-            <p id="resultado">Ingresa una cantidad y presiona "Convertir".</p>
-        </section>
-    </main>
-
-    <script src="main.js"></script>
+    <h2>Historial de conversiones</h2>
+        <ul id="historial"></ul>
+    <button id="borrar-historial">Borrar Historial</button>
+    <script src="js/main.js" ></script>
 </body>
-
 </html>
